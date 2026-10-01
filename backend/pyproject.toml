@@ -1,0 +1,9 @@
+[project]
+name = "tautrip-backend"
+version = "0.1.0"
+description = "TauTrip API — backend for the iOS app for Almaty hikers"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
