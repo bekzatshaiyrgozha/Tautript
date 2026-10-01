@@ -1,94 +1,77 @@
-# TauTrip
-
-iOS app for Almaty hikers: routes, filters, weather, hiking diary.
-
-| Part      | Stack                          | Folder      |
-|-----------|--------------------------------|-------------|
-| Backend   | Python 3.11+ · FastAPI · SQLite | `backend/`  |
-| Mobile    | React Native (iOS)             | `mobile/` *(coming next)* |
+# Tautript
+# TSIS 3 — Weekly Plan & Fact Report
+ 
+## Tautrip – Mountain Tours & Equipment Aggregator
+ 
+### Group members
+ 
+- Zhursin Adil - 23B031859
+- Dilnaz Yessenkyzy - 23B030348
+- Aisulu Alpamys - 23B031203
+- Bekzat Shaiyrgozha - 23B031482
+- Orazova Amina - 23B031398
+---
+ 
+## Week Summary
+ 
+This week the team successfully established the project foundation, completed MVP scope definition, and began sprint planning for Tautrip. We created the development environment, set up the GitHub repository, assigned team roles using RACI matrix, and initiated competitive research on tour platforms and equipment rental systems. The team held the project kick-off meeting and began scheduling user interviews with outdoor enthusiasts to validate market needs. Overall Status: **On Track**.
+ 
+## Plan for the Week
+ 
+- Define MVP scope and finalize feature list (login, tour browse, equipment filter, booking cart, user profile).
+- Set up GitHub repository and configure local development environment (Node.js, React, FastAPI, MongoDB).
+- Create UI/UX wireframes for login and tour browse pages in Figma.
+- Conduct competitive research on 5+ existing tour platforms and equipment rental sites.
+- Schedule and confirm first two user interviews with outdoor enthusiasts.
+- Assign RACI roles and prepare sprint 1 backlog for refinement meeting.
+## Plan & Fact Table
+ 
+| Task | Planned Result | Actual Result | Status | Blocker | Next Step |
+|------|----------------|---------------|--------|---------|-----------|
+| MVP scope definition | Final approved feature list (6+ must-haves) | Completed; 6 must features confirmed in kickoff | On Track | None | Use feature list for sprint 1 backlog |
+| GitHub repo & dev environment setup | Repository created; local environment ready for all team members | Repo created with .gitignore; 3 of 5 team members completed local setup | On Track | 2 devs need setup assistance | Send setup guide; pair programming session Thu |
+| UI wireframes (login & tour browse) | Figma wireframes for authentication flow and homepage | Draft wireframes completed; pending UX/PM review | At Risk | Designer review cycle delayed | Schedule design review meeting by Wed; finalize by Fri |
+| Competitive research (5 platforms) | Spreadsheet analysis with features, pricing, UX patterns | Research initiated; 4 competitors analyzed; document 60% complete | On Track | None | Complete analysis and present findings Mon |
+| User interview scheduling | 2 interviews confirmed and scheduled | 1 interview confirmed (Sep 25, 3 PM); 1 pending response | At Risk | Difficulty recruiting qualified participants | Send follow-up via Slack + SMS by Tue |
+| Sprint 1 backlog & RACI assignment | RACI matrix finalized; backlog items estimated | RACI matrix completed; backlog drafted with 12 user stories | On Track | None | Backlog refinement meeting Mon, Sep 30, 2 PM |
+ 
+## Lessons Learned
+ 
+1. **Communication channels matter:** Email alone is insufficient for time-sensitive scheduling; implementing Slack + SMS for urgent confirmations increased response rates and reduced delays.
+2. **On boarding documentation:** Local development environment setup took longer than estimated due to missing step-by-step guides; next sprint will include automated setup scripts to reduce friction.
+3. **Design feedback loops:** Ad-hoc wireframe reviews created bottlenecks; establishing weekly UX-PM sync meetings (every Monday and Thursday) will improve iteration speed and alignment.
+4. **Early stakeholder engagement:** Scheduling user interviews early (first week) validates assumptions quickly; allocate dedicated resource for interview coordination to avoid bottlenecks.
+## Risks & Mitigation
+ 
+| Risk | Impact | Probability | Mitigation |
+|------|--------|-------------|------------|
+| Low user interview response rate | Delayed validation; incorrect MVP assumptions | Medium | Send SMS reminders; offer flexible scheduling options |
+| Design review delays | Sprint 1 backlog blocked | Medium | Daily sync with UX designer; use async feedback tool (Loom) |
+| Development environment setup | Sprint 1 velocity reduced | Low | Provide automated setup script; schedule pair programming |
+ 
+## AI Disclosure
+ 
+**Transparency Statement:** AI assistance was used for document formatting, structure organization, and language refinement only. All project data, task details, plan-fact entries, status assessments, and lessons learned reflect actual team decisions and observations. The PM is fully responsible for the accuracy and authenticity of all reported information.
+ 
+## References
+ 
+Meredith, J. R., & Mantel, S. J. (2019). *Project Management: A Managerial Approach* (8th ed.). Wiley. Ch. 3, Section 3.3, pp. 118–123.
+ 
 
 ---
 
-## Backend — run locally
+## Development
 
-**Requirements:** Python 3.11+ (`python3 --version`), `make` (preinstalled on macOS).
+| Part    | Stack                           | Folder     | How to run |
+|---------|---------------------------------|------------|------------|
+| Backend | Python 3.11+ · FastAPI · SQLite | `backend/` | [backend/README.md](backend/README.md) |
+| iOS app | React Native (Expo)             | `mobile/`  | *coming next* |
 
-```bash
-git clone https://github.com/bekzatshaiyrgozha/Tautript.git
-cd Tautript/backend
-make run
-```
-
-That's it. On first run `make run` creates `.venv`, installs pinned dependencies and copies `.env.example` → `.env`. Then it starts the server at **http://127.0.0.1:8000**.
-
-Check it works:
-
-```bash
-curl http://127.0.0.1:8000/health
-# {"status":"ok","version":"0.1.0"}
-```
-
-| URL | What |
-|-----|------|
-| http://127.0.0.1:8000/health | Health check |
-| http://127.0.0.1:8000/docs   | Swagger UI (try endpoints in the browser) |
-| http://127.0.0.1:8000/redoc  | ReDoc API docs |
-
-### Without `make` (e.g. Windows)
+Quick start (backend):
 
 ```bash
 cd backend
-python3 -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
-pip install -r requirements-dev.txt
-cp .env.example .env               # Windows: copy .env.example .env
-python -m app
+make run        # → http://127.0.0.1:8000/health, docs at /docs
 ```
 
-### Commands
-
-| Command | What it does |
-|---------|--------------|
-| `make run`     | Install (first time) and start the API |
-| `make test`    | Run tests |
-| `make install` | Only create `.venv` and install dependencies |
-| `make clean`   | Delete `.venv` and caches |
-
-### Configuration (`backend/.env`)
-
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `HOST` | `127.0.0.1` | Set `0.0.0.0` to open the API from an iPhone on the same Wi-Fi |
-| `PORT` | `8000` | Server port |
-| `RELOAD` | `false` (`true` in `.env.example`) | Auto-restart on code changes |
-| `DB_URL` | `sqlite:///./tautrip.db` | Database connection string |
-| `API_KEY_WEATHER` | — | Key for the mountain weather API |
-
-`.env` is git-ignored. Never commit real keys — add new variables to `.env.example` instead.
-
-### Project structure
-
-```
-backend/
-├── app/
-│   ├── __init__.py      # app version (0.1.0)
-│   ├── __main__.py      # `python -m app` entry point
-│   ├── main.py          # FastAPI app factory
-│   ├── api/             # HTTP endpoints (routers)
-│   │   └── health.py    # GET /health
-│   ├── config/          # settings from env / .env
-│   ├── models/          # database models
-│   └── services/        # business logic, external APIs (weather)
-├── tests/
-├── requirements.txt     # runtime deps (pinned)
-├── requirements-dev.txt # + test deps
-├── .env.example
-└── Makefile
-```
-
-Adding an endpoint: create `app/api/<name>.py` with an `APIRouter`, register it in `app/api/__init__.py`, add a test in `tests/`.
-
-## Workflow
-
-- Branch from `main`: `feature/<short-name>`.
-- Open a pull request to `main`; `make test` must pass.
+Workflow: branch from `main` (`feature/<short-name>`), open a pull request to `main`.
