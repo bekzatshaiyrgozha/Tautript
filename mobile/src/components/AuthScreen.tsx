@@ -24,6 +24,8 @@ type Props = {
   /** Push the button to the bottom of the screen (sign-up steps) */
   buttonAtBottom?: boolean;
   footer?: ReactNode;
+  /** Sheets/dialogs — rendered outside the scroll view so they cover the whole screen */
+  overlay?: ReactNode;
   children: ReactNode;
 };
 
@@ -40,6 +42,7 @@ export function AuthScreen({
   onSubmit,
   buttonAtBottom = false,
   footer,
+  overlay,
   children,
 }: Props) {
   const { t } = useI18n();
@@ -91,6 +94,7 @@ export function AuthScreen({
           {footer}
         </ScrollView>
       </KeyboardAvoidingView>
+      {overlay}
     </SafeAreaView>
   );
 }

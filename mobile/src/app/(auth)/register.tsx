@@ -291,6 +291,20 @@ export default function RegisterScreen() {
       canSubmit={email.trim().length > 0 && tag.trim().length > 0 && password.length > 0 && terms}
       onSubmit={submitAccount}
       buttonAtBottom
+      overlay={
+        <BottomSheet visible={termsOpen} title={t('signup.termsTitle')} onClose={() => setTermsOpen(false)}>
+          <Text style={styles.termsBody}>{t('signup.termsText')}</Text>
+          <Pressable
+            style={styles.sheetButton}
+            onPress={() => {
+              setTerms(true);
+              setTermsOpen(false);
+            }}
+          >
+            <Text style={styles.sheetButtonText}>OK</Text>
+          </Pressable>
+        </BottomSheet>
+      }
     >
       <TextField
         label={t('auth.email')}
@@ -359,18 +373,6 @@ export default function RegisterScreen() {
         {fieldErrors.terms && <Text style={styles.termsError}>{t(fieldErrors.terms)}</Text>}
       </View>
 
-      <BottomSheet visible={termsOpen} title={t('signup.termsTitle')} onClose={() => setTermsOpen(false)}>
-        <Text style={styles.termsBody}>{t('signup.termsText')}</Text>
-        <Pressable
-          style={styles.sheetButton}
-          onPress={() => {
-            setTerms(true);
-            setTermsOpen(false);
-          }}
-        >
-          <Text style={styles.sheetButtonText}>OK</Text>
-        </Pressable>
-      </BottomSheet>
     </AuthScreen>
   );
 }

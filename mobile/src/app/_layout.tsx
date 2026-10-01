@@ -2,6 +2,7 @@ import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 
+import { PhoneFrame } from '../components/PhoneFrame';
 import { I18nProvider, useI18n } from '../i18n';
 import { AuthProvider, useAuth } from '../state/auth';
 import { StoreProvider } from '../state/store';
@@ -12,7 +13,9 @@ export default function RootLayout() {
     <I18nProvider>
       <AuthProvider>
         <StoreProvider>
-          <RootNavigator />
+          <PhoneFrame>
+            <RootNavigator />
+          </PhoneFrame>
           <StatusBar style="dark" />
         </StoreProvider>
       </AuthProvider>

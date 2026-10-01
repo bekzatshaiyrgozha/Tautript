@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { Modal, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Modal, Platform, Pressable, StyleSheet, Text, View, type ViewStyle } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { useI18n } from '../i18n';
@@ -10,17 +10,31 @@ type Props = { visible: boolean; title: string; onClose: () => void; children: R
 export function BottomSheet({ visible, title, onClose, children }: Props) {
   const { t } = useI18n();
   const insets = useSafeAreaInsets();
-  return (
-    <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
+
+  const content = (
+    <>
       <Pressable style={styles.backdrop} onPress={onClose} accessibilityLabel={t('common.close')} />
       <View style={[styles.sheet, { paddingBottom: 16 + insets.bottom }]}>
         <View style={styles.handle} />
         <Text style={styles.title}>{title}</Text>
         {children}
       </View>
+    </>
+  );
+
+  // Web preview: a fixed overlay stays inside the iPhone frame (a Modal would cover the whole page)
+  if (Platform.OS === 'web') {
+    return visible ? <View style={webOverlay}>{content}</View> : null;
+  }
+
+  return (
+    <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
+      {content}
     </Modal>
   );
 }
+
+const webOverlay = { position: 'fixed', top: 0, right: 0, bottom: 0, left: 0, zIndex: 1000 } as unknown as ViewStyle;
 
 const styles = StyleSheet.create({
   backdrop: { flex: 1, backgroundColor: colors.overlay },
