@@ -57,3 +57,21 @@ This week the team successfully established the project foundation, completed MV
  
 Meredith, J. R., & Mantel, S. J. (2019). *Project Management: A Managerial Approach* (8th ed.). Wiley. Ch. 3, Section 3.3, pp. 118–123.
  
+
+---
+
+## Development
+
+| Part    | Stack                           | Folder     | How to run |
+|---------|---------------------------------|------------|------------|
+| Backend | Python 3.11+ · FastAPI · SQLite | `backend/` | [backend/README.md](backend/README.md) |
+| iOS app | React Native (Expo) · TypeScript | `mobile/`  | [mobile/README.md](mobile/README.md) |
+
+Quick start:
+
+```bash
+cd backend && make run-lan       # API → http://127.0.0.1:8000/health, docs at /docs
+cd mobile && npm install && npm start   # second terminal → scan QR with iPhone (Expo Go)
+```
+
+Workflow: branch from `main` (`feature/<short-name>`), open a pull request to `main`.
