@@ -43,6 +43,7 @@ python -m app
 | Command | What it does |
 |---------|--------------|
 | `make run`     | Install (first time) and start the API |
+| `make run-lan` | Same, but reachable from an iPhone on the same Wi-Fi |
 | `make test`    | Run tests |
 | `make install` | Only create `.venv` and install dependencies |
 | `make clean`   | Delete `.venv` and caches |
@@ -55,7 +56,10 @@ python -m app
 | `PORT` | `8000` | Server port |
 | `RELOAD` | `false` (`true` in `.env.example`) | Auto-restart on code changes |
 | `DB_URL` | `sqlite:///./tautrip.db` | Database connection string |
+| `CORS_ORIGINS` | `http://localhost:8081,http://127.0.0.1:8081` | Browser origins allowed to call the API (Expo web preview) |
 | `API_KEY_WEATHER` | — | Key for the mountain weather API |
+
+Port 8000 busy (another project running)? Set `PORT=8001` in `.env`.
 
 `.env` is git-ignored. Never commit real keys — add new variables to `.env.example` instead.
 

@@ -65,13 +65,13 @@ Meredith, J. R., & Mantel, S. J. (2019). *Project Management: A Managerial Appro
 | Part    | Stack                           | Folder     | How to run |
 |---------|---------------------------------|------------|------------|
 | Backend | Python 3.11+ · FastAPI · SQLite | `backend/` | [backend/README.md](backend/README.md) |
-| iOS app | React Native (Expo)             | `mobile/`  | *coming next* |
+| iOS app | React Native (Expo) · TypeScript | `mobile/`  | [mobile/README.md](mobile/README.md) |
 
-Quick start (backend):
+Quick start:
 
 ```bash
-cd backend
-make run        # → http://127.0.0.1:8000/health, docs at /docs
+cd backend && make run-lan       # API → http://127.0.0.1:8000/health, docs at /docs
+cd mobile && npm install && npm start   # second terminal → scan QR with iPhone (Expo Go)
 ```
 
 Workflow: branch from `main` (`feature/<short-name>`), open a pull request to `main`.

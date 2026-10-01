@@ -17,6 +17,12 @@ class Settings(BaseSettings):
     reload: bool = False
     db_url: str = "sqlite:///./tautrip.db"
     api_key_weather: str = ""
+    # Comma-separated browser origins allowed to call the API (Expo web preview)
+    cors_origins: str = "http://localhost:8081,http://127.0.0.1:8081"
+
+    @property
+    def cors_origin_list(self) -> list[str]:
+        return [origin.strip() for origin in self.cors_origins.split(",") if origin.strip()]
 
 
 settings = Settings()

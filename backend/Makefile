@@ -2,11 +2,15 @@ PYTHON ?= python3
 VENV   := .venv
 BIN    := $(VENV)/bin
 
-.PHONY: run install test clean
+.PHONY: run run-lan install test clean
 
 ## run: create venv + install deps (first time only), then start the API
 run: $(VENV)/.installed .env
 	$(BIN)/python -m app
+
+## run-lan: same as run, but reachable from an iPhone on the same Wi-Fi
+run-lan: $(VENV)/.installed .env
+	HOST=0.0.0.0 $(BIN)/python -m app
 
 ## install: create .venv and install pinned dependencies
 install: $(VENV)/.installed
