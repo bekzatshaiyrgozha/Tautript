@@ -30,5 +30,6 @@ $(VENV)/.installed: requirements.txt requirements-dev.txt
 	$(BIN)/pip install -r requirements-dev.txt
 	touch $@
 
+# Copy .env.example and put a random SECRET_KEY in it
 .env:
-	cp .env.example .env
+	sed "s/^SECRET_KEY=.*/SECRET_KEY=$$($(PYTHON) -c 'import secrets; print(secrets.token_urlsafe(32))')/" .env.example > .env

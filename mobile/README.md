@@ -26,7 +26,7 @@ npm start
 
 **3.** Scan the QR code with the iPhone **Camera** → it opens in Expo Go.
 
-You should see **«Сервер жұмыс істеп тұр ✅»**. Edit `App.tsx` and save — the phone updates instantly.
+You should see the **Sign in** screen. Tap **Sign up**, and in development the 6-digit code is shown on the screen (the backend has no email set up yet). Edit any file in `src/` and save — the phone updates instantly.
 
 ### If it shows ❌
 
@@ -60,19 +60,37 @@ Handy for quick UI checks and for teammates without an iPhone. The real target i
 |----------|---------|-------------|
 | `EXPO_PUBLIC_API_URL` | `http://<your computer IP>:8000` (detected automatically in dev) | Backend address |
 
+## What's inside
+
+- **Sign in / Sign up / Forgot password** — following the Figma wireframes. Sign-up has 3 steps: email + @tag + password → 6-digit email code → name, birthday, gender, hiking preferences. Facebook / Apple buttons are placeholders for now.
+- **Tabs:** Home (mountain cards, search, sort, filter) · Routes (stages, packing checklist) · Favorites (♡) · Profile (photo, language, log out).
+- **3 languages:** Қазақша / Русский / English — switch on the auth screens or in Profile. All texts live in `src/i18n/strings.ts`.
+- The login token is stored in the iPhone Keychain (`expo-secure-store`). Favorites and the profile photo are stored on the phone for now.
+- Mountains and routes are demo data in `src/data/` until the backend has `/mountains` and `/routes`.
+
 ## Project structure
 
 ```
 mobile/
-├── App.tsx            # home screen (server status for now)
-├── index.ts           # entry point
-├── app.json           # Expo config: name, bundle id, icons
+├── app.json               # Expo config: name, bundle id, icons, plugins
 ├── src/
-│   ├── config.ts      # API_URL
-│   └── api/
-│       └── health.ts  # GET /health
-└── assets/            # icon, splash
+│   ├── app/               # screens (Expo Router: every file is a screen)
+│   │   ├── _layout.tsx    # providers + guard: guests see (auth), users see (tabs)
+│   │   ├── (auth)/        # login, register (3 steps), forgot
+│   │   ├── (tabs)/        # index (Home), routes, favorites, profile
+│   │   ├── mountain/[id].tsx
+│   │   └── route/[id].tsx
+│   ├── components/        # cards, inputs, chips, code input, sheets…
+│   ├── api/               # backend calls (client.ts, auth.ts)
+│   ├── state/             # auth session, favorites, validation helpers
+│   ├── i18n/              # kk / ru / en texts
+│   ├── data/              # demo mountains and routes
+│   ├── config.ts          # API_URL
+│   └── theme.ts           # colors (from the wireframes)
+└── assets/                # icon, splash
 ```
+
+Add a text: put the key in all three languages in `src/i18n/strings.ts`, then use `t('your.key')`.
 
 Add packages with `npx expo install <package>` (not `npm install`) — it picks versions that match the Expo SDK.
 
