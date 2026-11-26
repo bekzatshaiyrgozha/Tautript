@@ -1,22 +1,27 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 
-export type FavoriteKind = 'mountains' | 'routes';
+export type FavoriteKind = 'mountains' | 'routes' | 'tours';
 
 type Profile = { avatarUri: string | null };
 type Favorites = Record<FavoriteKind, string[]>;
-type State = { profile: Profile; favorites: Favorites };
+type State = { profile: Profile; favorites: Favorites; checked: string[] };
 
 const STORAGE_KEY = 'tautrip:v1';
 const INITIAL: State = {
   profile: { avatarUri: null },
-  favorites: { mountains: [], routes: [] },
+  favorites: { mountains: [], routes: [], tours: [] },
+  checked: [],
 };
 
 type Store = State & {
   setAvatar: (uri: string | null) => void;
   toggleFavorite: (kind: FavoriteKind, id: string) => void;
   isFavorite: (kind: FavoriteKind, id: string) => boolean;
+  /** Packing checklist ticks */
+  checked: string[];
+  toggleChecked: (id: string) => void;
+  clearChecked: (ids: string[]) => void;
 };
 
 const StoreContext = createContext<Store | null>(null);
@@ -34,6 +39,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
         setState({
           profile: { ...INITIAL.profile, ...saved.profile },
           favorites: { ...INITIAL.favorites, ...saved.favorites },
+          checked: saved.checked ?? [],
         });
       })
       .catch(() => {})
@@ -56,14 +62,22 @@ export function StoreProvider({ children }: { children: ReactNode }) {
     });
   }, []);
 
+  const toggleChecked = useCallback((id: string) => {
+    setState((s) => ({ ...s, checked: s.checked.includes(id) ? s.checked.filter((x) => x !== id) : [...s.checked, id] }));
+  }, []);
+
+  const clearChecked = useCallback((ids: string[]) => {
+    setState((s) => ({ ...s, checked: s.checked.filter((x) => !ids.includes(x)) }));
+  }, []);
+
   const isFavorite = useCallback(
     (kind: FavoriteKind, id: string) => state.favorites[kind].includes(id),
     [state.favorites],
   );
 
   const value = useMemo(
-    () => ({ ...state, setAvatar, toggleFavorite, isFavorite }),
-    [state, setAvatar, toggleFavorite, isFavorite],
+    () => ({ ...state, setAvatar, toggleFavorite, isFavorite, toggleChecked, clearChecked }),
+    [state, setAvatar, toggleFavorite, isFavorite, toggleChecked, clearChecked],
   );
 
   return <StoreContext.Provider value={value}>{children}</StoreContext.Provider>;
