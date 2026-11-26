@@ -1,7 +1,8 @@
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { ActivityIndicator, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, StyleSheet, Text, View } from 'react-native';
 
+import { MountainThumb } from '../components/MountainThumb';
 import { PhoneFrame } from '../components/PhoneFrame';
 import { I18nProvider, useI18n } from '../i18n';
 import { AuthProvider, useAuth } from '../state/auth';
@@ -30,7 +31,9 @@ function RootNavigator() {
   if (status === 'loading') {
     return (
       <View style={styles.splash}>
-        <ActivityIndicator color={colors.primary} size="large" />
+        <MountainThumb size={84} />
+        <Text style={styles.splashText}>TauTrip</Text>
+        <ActivityIndicator color={colors.primary} style={styles.spinner} />
       </View>
     );
   }
@@ -50,6 +53,9 @@ function RootNavigator() {
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
         <Stack.Screen name="mountain/[id]" />
         <Stack.Screen name="route/[id]" />
+        <Stack.Screen name="tour/[id]" />
+        <Stack.Screen name="compare" />
+        <Stack.Screen name="checklist" />
       </Stack.Protected>
 
       {/* Only for guests: login / register */}
@@ -61,5 +67,7 @@ function RootNavigator() {
 }
 
 const styles = StyleSheet.create({
-  splash: { flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: colors.background },
+  splash: { flex: 1, alignItems: 'center', justifyContent: 'center', gap: 12, backgroundColor: colors.background },
+  splashText: { fontSize: 28, fontWeight: '800', color: colors.primaryDark, letterSpacing: -0.8 },
+  spinner: { marginTop: 8 },
 });

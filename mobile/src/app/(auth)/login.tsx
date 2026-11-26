@@ -5,6 +5,7 @@ import { Pressable, StyleSheet, Text, View, type TextInput } from 'react-native'
 
 import { AuthScreen } from '../../components/AuthScreen';
 import { TextField } from '../../components/TextField';
+import { DEMO } from '../../config';
 import { useI18n, type StringKey } from '../../i18n';
 import { useAuth } from '../../state/auth';
 import { authErrorKey, isValidEmail } from '../../state/authErrors';
@@ -15,8 +16,9 @@ export default function LoginScreen() {
   const { signIn } = useAuth();
   const passwordRef = useRef<TextInput>(null);
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  // Demo build: prefilled, so a visitor only has to press the button
+  const [email, setEmail] = useState(DEMO ? 'demo@tautrip.kz' : '');
+  const [password, setPassword] = useState(DEMO ? 'demo1234' : '');
   const [emailError, setEmailError] = useState(false);
   const [serverError, setServerError] = useState<StringKey | null>(null);
   const [submitting, setSubmitting] = useState(false);
@@ -89,6 +91,7 @@ export default function LoginScreen() {
         returnKeyType="next"
         onSubmitEditing={() => passwordRef.current?.focus()}
       />
+      {DEMO && <Text style={styles.demoHint}>{t('auth.demoHint')}</Text>}
       <View>
         <TextField
           ref={passwordRef}
@@ -112,6 +115,7 @@ export default function LoginScreen() {
 }
 
 const styles = StyleSheet.create({
+  demoHint: { fontSize: 13, color: colors.primaryDark, backgroundColor: colors.primarySoft, borderRadius: radius.md, padding: 10 },
   forgot: { alignSelf: 'flex-end', marginTop: 10, marginRight: 4 },
   forgotText: { fontSize: 13, color: colors.muted },
   divider: { flexDirection: 'row', alignItems: 'center', gap: 12 },

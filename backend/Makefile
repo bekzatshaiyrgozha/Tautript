@@ -2,7 +2,7 @@ PYTHON ?= python3
 VENV   := .venv
 BIN    := $(VENV)/bin
 
-.PHONY: run run-lan install test clean
+.PHONY: run run-lan install test clean scrape
 
 ## run: create venv + install deps (first time only), then start the API
 run: $(VENV)/.installed .env
@@ -14,6 +14,10 @@ run-lan: $(VENV)/.installed .env
 
 ## install: create .venv and install pinned dependencies
 install: $(VENV)/.installed
+
+## scrape: collect real tour offers from partner sites into mobile/src/data/offers.json
+scrape:
+	python3 scripts/scrape_tours.py
 
 ## test: run the test suite
 test: $(VENV)/.installed

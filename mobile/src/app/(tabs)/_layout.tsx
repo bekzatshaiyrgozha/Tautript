@@ -21,12 +21,25 @@ export default function TabsLayout() {
         headerShown: false,
         tabBarActiveTintColor: colors.primary,
         tabBarInactiveTintColor: colors.muted,
-        tabBarStyle: { backgroundColor: colors.card, borderTopColor: colors.border },
+        tabBarLabelStyle: { fontSize: 10 },
+        tabBarStyle: {
+          backgroundColor: colors.card,
+          borderTopWidth: 0,
+          shadowColor: '#0F2A22',
+          shadowOpacity: 0.08,
+          shadowRadius: 12,
+          shadowOffset: { width: 0, height: -4 },
+          elevation: 8,
+        },
         sceneStyle: { backgroundColor: colors.background },
       }}
     >
       <Tabs.Screen name="index" options={{ title: t('tabs.home'), tabBarIcon: tabIcon('home', 'home-outline') }} />
-      <Tabs.Screen name="routes" options={{ title: t('tabs.routes'), tabBarIcon: tabIcon('map', 'map-outline') }} />
+      <Tabs.Screen name="tours" options={{ title: t('tabs.tours'), tabBarIcon: tabIcon('map', 'map-outline') }} />
+      <Tabs.Screen
+        name="equipment"
+        options={{ title: t('tabs.equipment'), tabBarIcon: tabIcon('bag-handle', 'bag-handle-outline') }}
+      />
       <Tabs.Screen
         name="favorites"
         options={{ title: t('tabs.favorites'), tabBarIcon: tabIcon('heart', 'heart-outline') }}

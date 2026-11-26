@@ -59,13 +59,17 @@ export default function ProfileScreen() {
         </View>
 
         <View style={styles.stats}>
-          <StatBox value={favorites.mountains.length} label={t('profile.favMountains')} />
-          <StatBox value={favorites.routes.length} label={t('profile.favRoutes')} />
+          <StatBox value={favorites.tours.length} label={t('profile.favorites')} />
         </View>
 
         <View style={styles.card}>
           <Text style={styles.label}>{t('profile.language')}</Text>
           <LanguageSwitcher />
+        </View>
+
+        <View style={styles.about}>
+          <Text style={styles.aboutTitle}>{t('profile.aboutTitle')}</Text>
+          <Text style={styles.aboutText}>{t('profile.aboutText')}</Text>
         </View>
 
         <Pressable
@@ -143,6 +147,9 @@ const styles = StyleSheet.create({
     borderRadius: radius.md,
     backgroundColor: '#FDECEA',
   },
+  about: { backgroundColor: colors.primarySoft, borderRadius: radius.md, padding: 14, gap: 4 },
+  aboutTitle: { fontSize: 14, fontWeight: '700', color: colors.primaryDark },
+  aboutText: { fontSize: 13, lineHeight: 18, color: colors.muted },
   pressed: { opacity: 0.7 },
   logoutText: { fontSize: 16, fontWeight: '600', color: colors.error },
 });

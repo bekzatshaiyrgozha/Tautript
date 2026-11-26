@@ -1,0 +1,510 @@
+{
+  "generatedAt": "2026-11-26T14:05:36",
+  "sources": [
+    {
+      "id": "azimut",
+      "name": "Azimut Travel",
+      "site": "https://azimut-travel.kz",
+      "ok": true,
+      "count": 10
+    },
+    {
+      "id": "algri",
+      "name": "Algri Travel",
+      "site": "https://algritravel.kz",
+      "ok": true,
+      "count": 4
+    },
+    {
+      "id": "monte",
+      "name": "Monte",
+      "site": "https://mnt.kz",
+      "ok": true,
+      "count": 4
+    }
+  ],
+  "offers": [
+    {
+      "company": "azimut",
+      "title": "Алматы, Кольсай, Каинды и Чарын",
+      "description": "Медеу, Шымбулак и Кок-Тобе, затем озёра, Чёрный и Лунный каньоны и Долина замков.",
+      "url": "https://azimut-travel.kz/tury-vyhodnogo-dnya-iz-almaty#wd-tour-almaty-lakes-3days",
+      "destinations": [
+        "kolsai",
+        "charyn"
+      ],
+      "priceKzt": 62000,
+      "priceNote": "perPerson",
+      "days": 3,
+      "durationLabel": "3 дня · город и природа",
+      "dates": [
+        "2026-10-20",
+        "2026-10-23",
+        "2026-10-27",
+        "2026-10-30",
+        "2026-11-03",
+        "2026-11-06",
+        "2026-11-10",
+        "2026-11-13",
+        "2026-11-17",
+        "2026-11-20",
+        "2026-11-24",
+        "2026-11-27"
+      ],
+      "meetingPoint": "Абая, 50 · парковка цирка. Сбор 08:00 · выезд 08:15.",
+      "checkedAt": "2026-11-26",
+      "id": "azimut-1"
+    },
+    {
+      "company": "azimut",
+      "title": "Кольсай, Каинды и Чарын · вечерний выезд",
+      "description": "Шесть локаций: два озера, Чарын, Чёрный и Лунный каньоны и река Чарын.",
+      "url": "https://azimut-travel.kz/tury-vyhodnogo-dnya-iz-almaty#wd-tour-kolsay-kaindy-charyn-evening",
+      "destinations": [
+        "kolsai",
+        "charyn"
+      ],
+      "priceKzt": 32000,
+      "priceNote": "perPerson",
+      "days": 2,
+      "durationLabel": "2 экскурсионных дня + вечерняя дорога",
+      "dates": [
+        "2026-10-20",
+        "2026-10-23",
+        "2026-10-27",
+        "2026-10-30",
+        "2026-11-03",
+        "2026-11-06",
+        "2026-11-10",
+        "2026-11-13",
+        "2026-11-17",
+        "2026-11-20",
+        "2026-11-24",
+        "2026-11-27"
+      ],
+      "meetingPoint": "Абая, 50 · парковка цирка. Сбор 20:00 · выезд 20:30.",
+      "checkedAt": "2026-11-26",
+      "id": "azimut-2"
+    },
+    {
+      "company": "azimut",
+      "title": "Кольсай, Каинды и Чарын · утренний выезд",
+      "description": "Озёра и каньоны с размещением в Саты и без вечернего выезда накануне.",
+      "url": "https://azimut-travel.kz/tury-vyhodnogo-dnya-iz-almaty#wd-tour-kolsay-kaindy-charyn-morning",
+      "destinations": [
+        "kolsai",
+        "charyn"
+      ],
+      "priceKzt": 32000,
+      "priceNote": "perPerson",
+      "days": 2,
+      "durationLabel": "2 дня · выезд утром",
+      "dates": [
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-24",
+        "2026-10-26",
+        "2026-10-28",
+        "2026-10-31",
+        "2026-11-02",
+        "2026-11-04",
+        "2026-11-07",
+        "2026-11-09",
+        "2026-11-11",
+        "2026-11-14",
+        "2026-11-16",
+        "2026-11-18",
+        "2026-11-21",
+        "2026-11-23",
+        "2026-11-25",
+        "2026-11-28",
+        "2026-11-30"
+      ],
+      "meetingPoint": "Абая, 50 · парковка цирка. Сбор 05:30 · выезд 06:00.",
+      "checkedAt": "2026-11-26",
+      "id": "azimut-3"
+    },
+    {
+      "company": "azimut",
+      "title": "Кольсай и Каинды за один день",
+      "description": "Два горных озера и остановка на Чёрном каньоне за один насыщенный день.",
+      "url": "https://azimut-travel.kz/tury-vyhodnogo-dnya-iz-almaty#wd-tour-kolsay-kaindy-1day",
+      "destinations": [
+        "kolsai"
+      ],
+      "priceKzt": 22000,
+      "priceNote": "perPerson",
+      "days": 1,
+      "durationLabel": "1 день · 3 локации",
+      "dates": [
+        "2026-10-20",
+        "2026-10-22",
+        "2026-10-24",
+        "2026-10-27",
+        "2026-10-29",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-03",
+        "2026-11-05",
+        "2026-11-07",
+        "2026-11-12",
+        "2026-11-14",
+        "2026-11-17",
+        "2026-11-19",
+        "2026-11-21",
+        "2026-11-24",
+        "2026-11-26",
+        "2026-11-28"
+      ],
+      "meetingPoint": "Абая, 50 · парковка цирка. Сбор 05:00 · выезд 05:20.",
+      "checkedAt": "2026-11-26",
+      "id": "azimut-4"
+    },
+    {
+      "company": "azimut",
+      "title": "Кольсай, Каинды и Чарын за один день",
+      "description": "Долина замков, Чёрный каньон и два озера — маршрут с ранним стартом и поздним возвращением.",
+      "url": "https://azimut-travel.kz/tury-vyhodnogo-dnya-iz-almaty#wd-tour-kolsay-kaindy-charyn-1day",
+      "destinations": [
+        "kolsai",
+        "charyn"
+      ],
+      "priceKzt": 23000,
+      "priceNote": "perPerson",
+      "days": 1,
+      "durationLabel": "1 день · основной формат / мини-группа",
+      "dates": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-20",
+        "2026-10-21",
+        "2026-10-22",
+        "2026-10-23",
+        "2026-10-24",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-27",
+        "2026-10-28",
+        "2026-10-29",
+        "2026-10-30",
+        "2026-10-31",
+        "2026-11-01",
+        "2026-11-02",
+        "2026-11-03",
+        "2026-11-04",
+        "2026-11-05",
+        "2026-11-06",
+        "2026-11-07",
+        "2026-11-08",
+        "2026-11-09",
+        "2026-11-10",
+        "2026-11-11",
+        "2026-11-12",
+        "2026-11-13",
+        "2026-11-14",
+        "2026-11-15",
+        "2026-11-16",
+        "2026-11-17",
+        "2026-11-18",
+        "2026-11-19",
+        "2026-11-20",
+        "2026-11-21",
+        "2026-11-22",
+        "2026-11-23",
+        "2026-11-24",
+        "2026-11-25",
+        "2026-11-26",
+        "2026-11-27",
+        "2026-11-28",
+        "2026-11-29",
+        "2026-11-30"
+      ],
+      "meetingPoint": "Абая, 50 · парковка цирка. Сбор 05:00 · выезд 05:20.",
+      "checkedAt": "2026-11-26",
+      "id": "azimut-5"
+    },
+    {
+      "company": "azimut",
+      "title": "Озеро Иссык и Тургенский водопад",
+      "description": "Пешая прогулка к водопаду, остановка на форелевой ферме и отдых у озера Иссык.",
+      "url": "https://azimut-travel.kz/tury-vyhodnogo-dnya-iz-almaty#wd-tour-issyk-turgen",
+      "destinations": [
+        "turgen"
+      ],
+      "priceKzt": 14000,
+      "priceNote": "perPerson",
+      "days": 1,
+      "durationLabel": "1 день · озеро, водопад, форелевое хозяйство",
+      "dates": [
+        "2026-10-18",
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-23",
+        "2026-10-25",
+        "2026-10-26",
+        "2026-10-28",
+        "2026-10-30"
+      ],
+      "meetingPoint": "Абая, 50 · парковка цирка. Сбор 08:00 · выезд 08:30.",
+      "checkedAt": "2026-11-26",
+      "id": "azimut-6"
+    },
+    {
+      "company": "azimut",
+      "title": "Плато Ассы и Медвежий водопад",
+      "description": "Тургеньское ущелье, Медвежий водопад и горные просторы плато Ассы.",
+      "url": "https://azimut-travel.kz/tury-vyhodnogo-dnya-iz-almaty#wd-tour-assy-turgen",
+      "destinations": [
+        "turgen"
+      ],
+      "priceKzt": 23000,
+      "priceNote": "perPerson",
+      "days": 1,
+      "durationLabel": "1 день · внедорожный маршрут",
+      "dates": [
+        "2026-10-20",
+        "2026-10-22",
+        "2026-10-24",
+        "2026-10-27",
+        "2026-10-29",
+        "2026-10-31"
+      ],
+      "meetingPoint": "Место сбора подтвердите у менеджера · сбор 07:30, выезд 08:00.",
+      "checkedAt": "2026-11-26",
+      "id": "azimut-7"
+    },
+    {
+      "company": "azimut",
+      "title": "Большое Алматинское озеро · пеший поход",
+      "description": "Трансфер до поста, пеший подъём к БАО, отдых у озера и обратный спуск.",
+      "url": "https://azimut-travel.kz/tury-vyhodnogo-dnya-iz-almaty#wd-tour-bao-hike",
+      "destinations": [
+        "bao"
+      ],
+      "priceKzt": 15000,
+      "priceNote": "perPerson",
+      "days": 1,
+      "durationLabel": "1 день · продолжительный подъём",
+      "dates": [
+        "2026-10-19",
+        "2026-10-21",
+        "2026-10-24",
+        "2026-10-26",
+        "2026-10-28",
+        "2026-10-31",
+        "2026-11-02",
+        "2026-11-04",
+        "2026-11-07",
+        "2026-11-09",
+        "2026-11-11",
+        "2026-11-14",
+        "2026-11-16",
+        "2026-11-18",
+        "2026-11-21",
+        "2026-11-23",
+        "2026-11-25",
+        "2026-11-28",
+        "2026-11-30"
+      ],
+      "meetingPoint": "Абая, 50 · парковка цирка. Сбор 08:00 · выезд 08:30.",
+      "checkedAt": "2026-11-26",
+      "id": "azimut-8"
+    },
+    {
+      "company": "azimut",
+      "title": "Алтын-Эмель за один день",
+      "description": "Насыщенный внедорожный маршрут по горам национального парка и знаменитой дюне.",
+      "url": "https://azimut-travel.kz/tury-vyhodnogo-dnya-iz-almaty#wd-tour-altyn-emel-1day",
+      "destinations": [
+        "altyn-emel"
+      ],
+      "priceKzt": 90000,
+      "priceNote": "perPerson",
+      "days": 1,
+      "durationLabel": "1 день · Актау, Катутау и Поющий бархан",
+      "dates": [
+        "2026-10-21",
+        "2026-10-28",
+        "2026-11-04",
+        "2026-11-11",
+        "2026-11-18",
+        "2026-11-25"
+      ],
+      "meetingPoint": "Абая, 50 · парковка цирка. Сбор 04:30 · выезд 05:00.",
+      "checkedAt": "2026-11-26",
+      "id": "azimut-9"
+    },
+    {
+      "company": "azimut",
+      "title": "Алтын-Эмель на два дня",
+      "description": "Актау, Катутау и Поющий бархан с ночёвкой в гостевом доме и более спокойным распределением программы.",
+      "url": "https://azimut-travel.kz/tury-vyhodnogo-dnya-iz-almaty#wd-tour-altyn-emel-2days",
+      "destinations": [
+        "altyn-emel"
+      ],
+      "priceKzt": 100000,
+      "priceNote": "perPerson",
+      "days": 2,
+      "durationLabel": "2 дня · гостевой дом в Басши",
+      "dates": [
+        "2026-10-24",
+        "2026-10-31",
+        "2026-11-07",
+        "2026-11-14",
+        "2026-11-21",
+        "2026-11-28"
+      ],
+      "meetingPoint": "Место сбора подтвердите у менеджера · сбор 06:30, выезд 07:00.",
+      "checkedAt": "2026-11-26",
+      "id": "azimut-10"
+    },
+    {
+      "company": "algri",
+      "title": "Туры в Чарын",
+      "url": "https://algritravel.kz/charynskiy_kanon",
+      "destinations": [
+        "charyn"
+      ],
+      "priceKzt": 10000,
+      "priceNote": "perPerson",
+      "days": 1,
+      "durationLabel": "1 день",
+      "dates": [
+        "2026-11-21",
+        "2026-11-22",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "meetingPoint": null,
+      "checkedAt": "2026-11-26",
+      "id": "algri-1"
+    },
+    {
+      "company": "algri",
+      "title": "Тур на озеро Иссык и Тургень",
+      "url": "https://algritravel.kz/ozero_issyk",
+      "destinations": [
+        "turgen"
+      ],
+      "priceKzt": 9000,
+      "priceNote": "perPerson",
+      "days": 1,
+      "durationLabel": "1 день",
+      "dates": [
+        "2026-11-21",
+        "2026-11-22",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "meetingPoint": null,
+      "checkedAt": "2026-11-26",
+      "id": "algri-2"
+    },
+    {
+      "company": "algri",
+      "title": "Тур на плато Ассы и водопад Медвежий",
+      "url": "https://algritravel.kz/plato-assy-vodopad-medvezhij-1-den",
+      "destinations": [
+        "turgen"
+      ],
+      "priceKzt": 17000,
+      "priceNote": "perPerson",
+      "days": 1,
+      "durationLabel": "1 день",
+      "dates": [
+        "2026-11-21",
+        "2026-11-22",
+        "2026-11-28",
+        "2026-11-29"
+      ],
+      "meetingPoint": null,
+      "checkedAt": "2026-11-26",
+      "id": "algri-3"
+    },
+    {
+      "company": "algri",
+      "title": "Тур Кольсай и Каинды (2 дня)",
+      "url": "https://algritravel.kz/kolsayskie_ozera",
+      "destinations": [
+        "kolsai"
+      ],
+      "priceKzt": 30000,
+      "priceNote": "perPerson",
+      "days": 2,
+      "durationLabel": "2 дн.",
+      "dates": [
+        "2026-06-05",
+        "2026-06-12",
+        "2026-06-19",
+        "2026-06-26"
+      ],
+      "meetingPoint": null,
+      "checkedAt": "2026-11-26",
+      "id": "algri-4"
+    },
+    {
+      "company": "monte",
+      "title": "Большое Алматинское Озеро - пеший поход к жемчужине Алматы, горному озеру - БАО",
+      "url": "https://mnt.kz/bao",
+      "destinations": [
+        "bao"
+      ],
+      "priceKzt": 13000,
+      "priceNote": "group:9",
+      "days": 1,
+      "durationLabel": "7-8 часов",
+      "dates": [],
+      "meetingPoint": null,
+      "checkedAt": "2026-11-26",
+      "id": "monte-1"
+    },
+    {
+      "company": "monte",
+      "title": "Поход на Кок-Жайляу",
+      "url": "https://mnt.kz/kok-zhailau",
+      "destinations": [
+        "kok-zhailau"
+      ],
+      "priceKzt": 13000,
+      "priceNote": "group:9",
+      "days": 1,
+      "durationLabel": "5-7 часов",
+      "dates": [],
+      "meetingPoint": null,
+      "checkedAt": "2026-11-26",
+      "id": "monte-2"
+    },
+    {
+      "company": "monte",
+      "title": "Поход к Бутаковскому водопаду",
+      "url": "https://mnt.kz/butakovskiy-vodopad",
+      "destinations": [
+        "butakovka"
+      ],
+      "priceKzt": 13000,
+      "priceNote": "group:9",
+      "days": 1,
+      "durationLabel": "6-7 часов",
+      "dates": [],
+      "meetingPoint": null,
+      "checkedAt": "2026-11-26",
+      "id": "monte-3"
+    },
+    {
+      "company": "monte",
+      "title": "Нижний и Верхний Кольсай",
+      "url": "https://mnt.kz/kolsai-tri-ozera",
+      "destinations": [
+        "kolsai"
+      ],
+      "priceKzt": 29000,
+      "priceNote": "group:9",
+      "days": 2,
+      "durationLabel": "2 дня",
+      "dates": [],
+      "meetingPoint": null,
+      "checkedAt": "2026-11-26",
+      "id": "monte-4"
+    }
+  ]
+}

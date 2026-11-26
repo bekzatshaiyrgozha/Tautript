@@ -1,3 +1,4 @@
+import { TOURS_EN, TOURS_KK, TOURS_RU } from './toursStrings';
 import type { Lang } from './types';
 
 const kk = {
@@ -152,6 +153,7 @@ const kk = {
   'forgot.send': 'Код жіберу',
   'forgot.newPassword': 'Жаңа құпиясөз',
   'forgot.save': 'Сақтап, кіру',
+  ...TOURS_KK,
 };
 
 export type StringKey = keyof typeof kk;
@@ -309,6 +311,7 @@ const ru: Strings = {
   'forgot.send': 'Отправить код',
   'forgot.newPassword': 'Новый пароль',
   'forgot.save': 'Сохранить и войти',
+  ...TOURS_RU,
 };
 
 const en: Strings = {
@@ -463,6 +466,7 @@ const en: Strings = {
   'forgot.send': 'Send code',
   'forgot.newPassword': 'New password',
   'forgot.save': 'Save and sign in',
+  ...TOURS_EN,
 };
 
 export const STRINGS: Record<Lang, Strings> = { kk, ru, en };

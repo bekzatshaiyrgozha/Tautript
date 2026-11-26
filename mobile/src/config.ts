@@ -13,3 +13,9 @@ function devComputerHost(): string | undefined {
 
 export const API_URL =
   process.env.EXPO_PUBLIC_API_URL || `http://${devComputerHost() ?? 'localhost'}:${API_PORT}`;
+
+/**
+ * Demo build (`npm run build:demo`): no backend needed. Any email/password signs in and the
+ * sign-up code is always shown on screen. Used for a shareable web link to show the design.
+ */
+export const DEMO = process.env.EXPO_PUBLIC_DEMO === '1';

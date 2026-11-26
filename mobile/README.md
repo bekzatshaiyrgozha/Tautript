@@ -63,10 +63,12 @@ Handy for quick UI checks and for teammates without an iPhone. The real target i
 ## What's inside
 
 - **Sign in / Sign up / Forgot password** — following the Figma wireframes. Sign-up has 3 steps: email + @tag + password → 6-digit email code → name, birthday, gender, hiking preferences. Facebook / Apple buttons are placeholders for now.
-- **Tabs:** Home (mountain cards, search, sort, filter) · Routes (stages, packing checklist) · Favorites (♡) · Profile (photo, language, log out).
+- **Onboarding:** 2 intro slides on first launch, then Sign in.
+- **Tabs:** Home (hero, quick actions, popular tours) · Tours (search, level filter, pick up to 3 → Compare) · Equipment (rental prices) · Favorites (♡ tours) · Profile (photo, language, about the data, log out).
+- **Tour details**, **Compare tours** (with a warning when a one-day hike is compared with a multi-day trek) and **Packing checklist** (autumn / summer / winter, ticks are saved on the phone).
 - **3 languages:** Қазақша / Русский / English — switch on the auth screens or in Profile. All texts live in `src/i18n/strings.ts`.
 - The login token is stored in the iPhone Keychain (`expo-secure-store`). Favorites and the profile photo are stored on the phone for now.
-- Mountains and routes are demo data in `src/data/` until the backend has `/mountains` and `/routes`.
+- Tours, equipment and checklists are demo data in `src/data/` until the backend has `/tours` and `/equipment`. The older mountain/route screens (`mountain/[id]`, `route/[id]`) are kept but no longer linked from the tabs.
 
 ## Project structure
 
